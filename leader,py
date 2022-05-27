@@ -1,0 +1,17 @@
+n=int(input())
+i=0
+l1=list()
+while i<n:
+    l1.append(int(input()))
+    i=i+1
+i=0
+while i<n+1:
+    j=i
+    while j<n-1:
+        if l1[j+1]<l1[i]:
+            if j+1==n-1:
+                print(l1[i])
+            j=j+1
+        else:
+            break;
+    i=i+1
