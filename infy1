@@ -1,0 +1,33 @@
+E=int(input())
+n=int(input())
+i=0
+l1=list()
+while i<n:
+    l1.append(int(input()))
+    i=i+1
+count=0
+K=E
+l2=list()
+for i in l1:
+    if i<=E:
+        if i*2<=E:
+            E=E-i*2
+            count=count+2
+        else:
+            E=E-i
+            count=count+1
+    elif i>E:
+        E=E-i
+        count=count+1
+    if (i==l1[-1] and E<=0):
+        l2.append(count)
+    if (i!=l1[-1] and E<=0):
+        l2.append(count)
+        count=0
+        E=K
+    if (i==l1[-1] and (E!=0 or E>0)):
+        print('-1')
+if len(l2)>0:
+    print(min(l2))
+            
+        
