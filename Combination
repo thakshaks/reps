@@ -1,0 +1,20 @@
+//Combinations python code
+
+nums = [1,1,3,4,5,7,8,9]
+l1=[]
+l1.append([nums[0]])
+i=1
+l2=[]
+l3=[]
+while i<len(nums):
+    l2=[]
+    l3=[]
+    for j in l1:
+        l2=j+[nums[i]]
+        l3.append(l2)
+        l2=[]
+    for m in l3:
+        l1.append(m)
+    l1.append([nums[i]])
+    print(l1)
+    i=i+1
